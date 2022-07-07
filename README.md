@@ -8,7 +8,7 @@ Try to say "it is possible to X" or "a hacker could Y" instead of "You should X"
 ...With that said, welcome to the WIFI HACKING LAB!
 
 # contents
-  Knowledge base of WLAN WPA3-PSK and WPA2 hacking tools and research. The goal of this project is to
+  This project is a Knowledge base of WLAN WPA3-PSK and WPA2 hacking tools and research. The goal of this project is to
 create a way to break into a WPA3-PSK network. In my approach, part of hacking WPA3 is understanding
 how WPA2 works, so this repo will have tools and knowledge for hacking WPA2-PSK as well. This 
 document is meant to give a skiddie-tier overview of WLAN-cracking without diving into the weeds. 
