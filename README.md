@@ -219,7 +219,7 @@ projects will be a folder of saved thread (highlights) from my previous research
 check chan archives in order to get it.
 
 # Dev teams working on WPA3
-(I'm actively looking for people to collaborate with)
-airgeddon
-aircrack-ng
-WiFite (unconfirmed)
+Most of these teams are manned by volunteers. I'm actively looking for people to collaborate with.
+- airgeddon
+- aircrack-ng
+- WiFite (unconfirmed)
