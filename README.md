@@ -4,20 +4,101 @@
 All research performed in a safe and legal manner. Please do not discuss the wild use of the tools
 in this repo, or any other tools to take actions against the law. At least, not on GitHub. Radio 
 jamming is illegal, and so is deauthenticating and jamming WiFi. Don't get in trouble!
-Try to say "it is possible to X" or "a hacker could Y" instead of "You should X" or "I will Y". 
 ...With that said, welcome to the WIFI HACKING LAB!
 
 # contents
-  This project is a Knowledge base of WLAN WPA3-PSK and WPA2 hacking tools and research. The goal of this project is to
+  This project is a knowledge base of WLAN WPA3-PSK and WPA2 hacking tools and research. The goal of this project is to
 create a way to break into a WPA3-PSK network. In my approach, part of hacking WPA3 is understanding
 how WPA2 works, so this repo will have tools and knowledge for hacking WPA2-PSK as well. This 
 document is meant to give a skiddie-tier overview of WLAN-cracking without diving into the weeds. 
-  In general, this repo should contain links to YouTube videos, other GitHubs, GitLabs, and places to
+  This repo should contain links to YouTube videos, other GitHubs, GitLabs, and places to
 find code. I will also download and paste research papers from elite hackers into the repo. I take no
 ownership of such research papers, and promise to do the honorable thing, and always disclaim them. 
   On the topic of research papers, this repo will contain research documents pertaining to WiFi and
 security, as well as other topics. Programming languages involved will mostly consist of C and Python.
-  Cryptography is also a very important topic of discussion in this research project. 
+  
+# GNU/Linux Distributions
+  Every computer nerd's favorite subject to argue about is Linux distros. In this research lab, you are
+  responsible for building and using your own Linux distribution. As long as your distro has GNU and
+  can install things from GitHub, then you should be fine. Many Linux distros exist. I can't/won't 
+  cover them all in this document because it's pointless. This guide assumes you're somewhat familiar
+  with GNU/Linux terminal and commands.
+  
+  You may choose whatever distro you want. Some popular ones are Ubuntu, Kali, Redhat, Manjaro, Gentoo,
+  Mint, Debian, Devuan, and Arch. Cracking WLAN's should be possible with any of these, so long as you
+  can compile and install the dependencies. This lab should also be possible on a Mac, and on Windows
+  if you're using a VM (see next section). As of this writing, I have not tested any 802.11 cracking
+  techniques by using a Windows device, and I do not own a Macintosh.
+  
+  The research that I've done in this lab is all done on a Debian-based Linux distro. I tend to use 
+  Linux Mint myself. I have my distro on a live USB stick. The stick can boot a live linux distro, and
+  install a linux distro. You really should have one of these. 
+
+# Kali Linux
+
+  Kali Linux, formerly known as Backtrack, is a Linux distro with a bunch of tools for hacking. 
+  It's based on Debian/Ubuntu, so it's actually pretty nice. Beginner friendly, too.
+  Many hackers install and use Kali for its convenience. If you have all the tools you need for the
+  lab working in Kali, then go ahead and use it. But if you're wondering which distro you should use
+  for the WLAN-hacking lab, you may want to think twice about using Kali. There are certain problems 
+  with using Kali Linux, as outlined here.
+
+  Kali ISOs need to be updated in order to get updated Kali tools. Even then, the tools provided with
+  the Kali ISO might be out of date. That's why it's considered good practice to always update your 
+  tools when running a Kali Live USB or VM. 
+  
+  You may run into compatibility errors and dependency problems when trying to run 'pre-installed' 
+  scripts on Kali. Back in my early hacking days before I largely gave up on using Kali, the scripts
+  included could be run with intermittent success. As I developed, I realized Kali lacked what I needed,
+  although I fell in love with the special node-based text editor CherryTree. I will upload notes to
+  this repo in the form of CherryTree (.ctb) documents.
+  
+  Kali has problems running apt-get, as well as other problems that you just wouldn't expect on Ubuntu.
+  For example, if you leave it running long enough for Kali live to enter lockscreen, there is a password
+  but it's hardcoded as 'toor' which is root backwards. I happened to find that detail by reading several
+  books on hacking and Kali. That's why I don't really recommend that you do this project from Kali. 
+  
+  At any rate, I find it much easier to git clone the required tools and install them myself on Ubuntu
+  or Mint, than to just take Kali and run them. I'll research Kali's built in tools and their efficacy.
+  I believe Kali has aircrack-ng suite preinstalled, as well as Fluxion, WiFite, mdk4, mdk3, and most
+  of the other stuff you'll probably need for this lab. Hopefully I'll be able to develop a guide to 
+  crack WLAN's using Kali. I'll make a specific document about using Kali to run the tools required. 
+
+# Ubuntu
+  I highly recommend a fresh Ubuntu install to begin with. From there, you can set it all up yourself
+  just the way you want it. Ubuntu doesn't have hacking tools pre-installed, but that's actually a good 
+  thing. There are significant benefits to downloading and installing your own hacking tools. 
+  
+# Mint
+  My personal distro of choice. It's effectively the same thing as Ubuntu, with a different look n' feel.
+  
+# apt-get install
+  Ubuntu, Mint, Kali, and Debian use apt (advanced package tool) which is a frontend for wget and dpkg. 
+  Sample usage to install aircrack-ng: 
+  
+  sudo apt-get -y install aircrack-ng
+  
+  apt may also be used to search for packages (you don't need sudo):
+  
+  apt-cache search aircrack
+
+# other package managers
+  I don't know much about these, but if you're using pacman, yum, flatpak, snap, brew, rpm, or whatever
+  else may be out there, just know that I run apt on my system. As long as your package manager can install
+  the required package, then you're good. If not, Google the issue and post about it on the forums and here.
+
+# Windows
+  It's very hard to try using Windows to hack. You should just install a Linux distro instead.
+  If you insist on keeping Windows installed on your device, then you should at least dual-boot.
+  If you're dead-set on using Windows to hack WLANs for some reason, you will still have to
+  virtualize Linux using VirtualBox or another VM hypervisor. One of the objectives in this lab
+  is to test the relative effectiveness of a virtualized Linux distro with a hardware passthru
+  for the network interface.
+  
+# Mac
+  If you can figure out how to compile airmon-ng and the other utilities you'll need for this lab on a 
+  Mac, then it is viable in this lab. I believe that you can use a Mac to hack WLANs. However, I have
+  not tested this out. If you have experience cracking WLANs using a MacBook, please discuss it.
 
 # 802.11 Protocol
   802.11 is also known as 'WiFi', and many generations have evolved over the ages. In general, WiFi is
@@ -57,14 +138,19 @@ run the scripts cloned or forked within the repo to test them yourself.
 # Scripts for Hacking WPA2-PSK
 The most effective scripts I've found to break into WPA2-PSK networks are:
 
-*WiFite (or its new rewrite WiFite2)
-*airgeddon
-*aircrack-ng
-*fluxion
-*mdk4/mdk3
-*Pyrit
+WiFite (or its new rewrite WiFite2)
+airgeddon
+aircrack-ng
+fluxion
+mdk4/mdk3
+Pyrit
 
 # General Notes on Installation/Compilation
+  The most effective way to install something in this lab is to clone it from GitHub. 
+  YOUR DISTRO'S PACKAGE MANAGER IS NOT GUARANTEED TO WORK!
+  In my experience using apt-get install, I've installed broken and outdated scripts.
+  Cloning directly from GitHub when in doubt is better, although certain tools like airmon-ng can be 
+  acquired from apt-get install without a problem. This does depend on distro. 
 
 # Legacy WLAN hacking methods
   It used to be extremely easy to hack a WiFi network. WLANs with WEP could be hacked easily through
