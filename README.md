@@ -1,7 +1,6 @@
 # July 7, 2022
 # project_WPA3-PSK_hack [WORK IN PROGRESS]
 # DISCLAIMER
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 All research performed in a safe and legal manner. Please do not discuss the wild use of the tools
 in this repo, or any other tools to take actions against the law. At least, not on GitHub. Radio 
 jamming is illegal, and so is deauthenticating and jamming WiFi. Don't get in trouble!
