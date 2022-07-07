@@ -88,20 +88,14 @@ Likewise, the techniques explored will attempt to counteract cutting-edge signal
 and beacon-tracking attempts.
 
 # Building WiFi Hacking Labs
+  
   Building a lab for hacking is considered important so you can experiment in a legal and safe type
 of environment. Normally, the training hacker would use VirtualBox or VMWare, or some other hyper-
 visor. They would set up as many virtual machines on their network as needed, and then run the 
 experiment they're trying to do. This type of lab setup is great, but in order to practice hacking
 802.11 networks, you'll need more than a couple of VM's and a server. In other words, forget what
 you know about setting up a conventional malware testing labs. A lab has to be purpose built.
-  Actually, hardware is a very important question in 802.11 hacking. 802.11 hacking is unlike most
-other types of hacking that you can just practice online. Many types of hacking such as web hacking,
-privilege escalation via buffer overflows, etc. can be done completely remotely online on someone 
-else's machine. For a legal example of such labs, you can visit overthewire.org/wargames
-  Overthewire.org is a great place to hack, but does not have 802.11 wargames. The reason for this
-is because building a WiFi hacking lab is actually pretty hard. As previously mentioned, you need
-various hardware. In this research project, I'll summarize the hardware I've used, why I've used it,
-and what other hardware can be used in the lab.
+  
   In order to keep things legal, hacking 802.11 networks would require building your own first. One
 easy way of building your own 802.11 WiFi network is by plugging in an access point in your home.
 Most people consider a 'router' and a wireless AP to be the same thing. For the purpose of a small
@@ -110,6 +104,7 @@ several AP's within your home including a hotspot. Step 1 of practicing hacking 
 your router and WiFi network. I recommend going to the store and buying a spare router. The newer
 the hardware, the more secure it's going to be. To practice hacking WPA3, you'll need a WiFi6 (WPA3)
 compatible device. Obviously. 
+  
   You may enter your router through the default gateway and use the default login, and then set up
 the network you're trying to hack. This is your lab. You may connect whatever physical devices to 
 your network that you want. If you want to make it more advanced, you can try running things like
