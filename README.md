@@ -18,6 +18,7 @@ ownership of such research papers, and promise to do the honorable thing, and al
 security, as well as other topics. Programming languages involved will mostly consist of C and Python.
   
 # GNU/Linux Distributions
+
   Every computer nerd's favorite subject to argue about is Linux distros. In this research lab, you are
   responsible for building and using your own Linux distribution. As long as your distro has GNU and
   can install things from GitHub, then you should be fine. Many Linux distros exist. I can't/won't 
@@ -83,9 +84,10 @@ security, as well as other topics. Programming languages involved will mostly co
   apt-cache search aircrack
 
 # other package managers
-  I don't know much about these, but if you're using pacman, yum, flatpak, snap, brew, rpm, or whatever
-  else may be out there, just know that I run apt on my system. As long as your package manager can install
-  the required package, then you're good. If not, Google the issue and post about it on the forums and here.
+  If you're using pacman, yum, flatpak, snap, brew, rpm, or whatever else may be out there... 
+  As long as your package manager can install the required package, then you're good. If not, 
+  Google the issue and post about it on the forums and here. Please remember that cloning
+  from GitHub is the recommended installation for this lab, and not the package manager.
 
 # Windows
   It's very hard to try using Windows to hack. You should just install a Linux distro instead.
@@ -114,7 +116,7 @@ https://en.wikipedia.org/wiki/List_of_WLAN_channels
 There are many techniques. The general trend in 2022 has been significant security improvements in the 
 underlying security mechanisms of WiFi. This repo will have a legacy section which will outline the 
 cryptographic weaknesses of old protocols if you're interested. 
-  Obviously, old attacks are ineffective. The only value from them is what they can tell you about new
+Obviously, old attacks are ineffective. The only value from them is what they can tell you about new
 protocols. Chances of finding old hardware is actually pretty low. We should focus on new stuff.
   
 # WPA3-PSK and WiFi 6
@@ -127,6 +129,9 @@ WPA3-PSK seems to still be in its nascent stage, it is hard to find information 
 will attempt to reverse engineer WPA3-PSK by understanding the attacks against WPA2-PSK, and then 
 looking at how these attacks were mitigated.
 
+  From a security point of view, WPA3-PSK has a new type of handshake called the Dragonfly handshake.
+  It uses SAE (Simultaneous Authentication of Equals) for encryption. 
+
 # WPA2-PSK
   Currently the most common type of WLAN in the wild as of 2022. Slowly being phased out by WPA3-PSK. 
 Probably will become obsolete in the coming years. Wide variety of attacks exist against WPA2-PSK. 
@@ -134,6 +139,7 @@ WPA2-PSK is still more secure than its predecessors, but by 2022 it is considere
   This project's documentation details how to hack a WPA2-PSK network in every known possible way. 
 There are multiple types of known attacks against WPA2-PSK which are detailed in this repo. You may
 run the scripts cloned or forked within the repo to test them yourself.
+
 
 # Scripts for Hacking WPA2-PSK
 The most effective scripts I've found to break into WPA2-PSK networks are:
@@ -150,7 +156,8 @@ Pyrit
   YOUR DISTRO'S PACKAGE MANAGER IS NOT GUARANTEED TO WORK!
   In my experience using apt-get install, I've installed broken and outdated scripts.
   Cloning directly from GitHub when in doubt is better, although certain tools like airmon-ng can be 
-  acquired from apt-get install without a problem. This does depend on distro. 
+  acquired from apt-get install without a problem. This does depend on distro. Otherwise, just
+  read the manpages and readme's of the tools you're using. 
 
 # Legacy WLAN hacking methods
   It used to be extremely easy to hack a WiFi network. WLANs with WEP could be hacked easily through
@@ -215,4 +222,4 @@ check chan archives in order to get it.
 (I'm actively looking for people to collaborate with)
 airgeddon
 aircrack-ng
-WiFite
+WiFite (unconfirmed)
