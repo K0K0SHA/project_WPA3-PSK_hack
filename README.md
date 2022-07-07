@@ -25,7 +25,7 @@ just radio signals on the 2.4GHz and 5GHz bands. Because of how precise our digi
 have become, these frequencies can be subdivided into smaller frequency ranges called channels, or bands.
 The networks that are created through the use of 802.11 are known as WLANs, or Wireless LANs. WiFi.
 It should also be noted that BlueTooth uses 2.4GHz frequency range, but BT is not the focus right now.
-The bands of WiFi depend on which country you're in. Here is a frequency list for USA:
+The bands of WiFi depend on which country you're in. Here is a frequency list:
 https://en.wikipedia.org/wiki/List_of_WLAN_channels
 
 # Attacking WiFi
@@ -118,7 +118,8 @@ it however you want. To simulate the average normie, it suffices to leave most s
 
 # What about Hotspots?
   Hotspots are made by cell phones and cars with data plans. I have not done any research into hacking
-a 'hotspot' AP, although you expect this research in the future.
+a 'hotspot' AP, although you expect this research in the future. In theory, a hotspot is just 802.11 
+with specialized hardware.
 
 # Doing research
   I have personally found it hard to organize the vast amount of knowledge I've gained from running
