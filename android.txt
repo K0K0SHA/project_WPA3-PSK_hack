@@ -1,0 +1,47 @@
+THE APPLICATION OF MOBILE DEVICES TO WLAN HACKING
+-------------------------------------------------
+"Can I hack WiFi from my phone?"
+The answer is no, probably not. But you can help plan out an attack by wardriving. 
+
+In the context of this document, a 'mobile device' is an 'Android' device. It is NOT an iOS device like an iPhone or iPad. Trying to hack WLANs with
+something as locked down as iOS is idiotic, even if I'm wrong and it isn't impossible. The 'Android' doesn't have to specifically run Android. It may
+be running Lineage or Graphene. The said device likely has an arm64 chip, made by a manufactuer such as Qualcomm or MediaTek. It is running a Linux 
+kernel. It may or may not be rooted. Finally, your mobile device should probably be running Termux, or some other terminal. 
+
+Mobile devices are considered unfavorable, but my previous research into the subject has shown significantly more potential than I thought possible.
+Because they use the Linux kernel, they are actually more favorable for hacking WLAN's than Windows. I have managed to install airmon-ng on Termux 
+with no problems at all. The real problem comes when you try to use airmon-ng on a mobile device. If you try to use the 'normal way' to bring your 
+network interface into monitor mode, it will not work on the cell phone's built in network interface card. The mobile device's built in network card
+does not ever support monitor mode. In other words, the hardware is too locked down to 'hack WiFi'. 
+
+According to what I've read online, certain phone models actually do have monitor mode available for their network card. I have never successfully
+used airmon-ng from any mobile device, but I'll try again for the purposes of this lab research project. Mobile devices are not the focus of this 
+project. Nevertheless, I've seen threads on forums about people hooking up an external network card to their phones using a special adapter. They
+claim that they are able to run airmon-ng this way. In this lab, we will attempt to do the same thing.
+
+Theoretically, it's possible to use your mobile device for a couple of basic WLAN-related attacks:
+
+1.
+It's possible to triangulate WiFi access points, even without root. This is passive and never illegal. Check out the app WiFiAnalyzer from F-Droid.
+Passively detecting AP beacons gives you information about the AP's SSID, encryption type, channel, and more. I saw a bunch of hidden SSID's when I 
+scanned around. 
+
+2. 
+If you manage to connect an external network card to your phone, then you may theoretically capture the handshake hash of a WPA2-PSK network. The
+skiddie way to do this on a normal Linux distro is to run WiFite or Fluxion and capture the hash. I see no reason a mobile device can't do it. 
+
+3.
+You can get very creative and hook your Android up via USB or Bluetooth. This way, you can control your Software Defined Radio (SDR) or even your
+computer through your phone. 
+
+
+
+See also:
+LineageOS
+Magisk
+Graphene
+Fluxion
+airmon-ng
+Termux
+adb
+fastboot
