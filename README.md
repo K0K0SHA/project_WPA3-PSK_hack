@@ -11,8 +11,7 @@ Try to say "it is possible to X" or "a hacker could Y" instead of "You should X"
   Knowledge base of WLAN WPA3-PSK and WPA2 hacking tools and research. The goal of this project is to
 create a way to break into a WPA3-PSK network. In my approach, part of hacking WPA3 is understanding
 how WPA2 works, so this repo will have tools and knowledge for hacking WPA2-PSK as well. This 
-document is meant to give a skiddie-tier overview of WLAN-cracking without diving into the weeds of
-all the technical specifics in this specific document. 
+document is meant to give a skiddie-tier overview of WLAN-cracking without diving into the weeds. 
   In general, this repo should contain links to YouTube videos, other GitHubs, GitLabs, and places to
 find code. I will also download and paste research papers from elite hackers into the repo. I take no
 ownership of such research papers, and promise to do the honorable thing, and always disclaim them. 
