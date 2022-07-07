@@ -40,6 +40,7 @@ protocols. Chances of finding old hardware is actually pretty low. We should foc
   
 # WPA3-PSK and WiFi 6
 https://www.intel.com/content/www/us/en/gaming/resources/wifi-6.html
+  
   With the introduction of WiFi 6 (802.11ax), wireless security has improved once again. A skiddie can
 no longer easily break into a WPA3-secured network. WPA3 offers significant security improvements over
 WPA2, just like WiFi 6 offers speed improvements over its predecessor. Because security research into 
