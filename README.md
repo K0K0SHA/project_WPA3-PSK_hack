@@ -57,12 +57,14 @@ run the scripts cloned or forked within the repo to test them yourself.
 # Scripts for Hacking WPA2-PSK
 The most effective scripts I've found to break into WPA2-PSK networks are:
 
->WiFite (or its new rewrite WiFite2)
->airgeddon
->aircrack-ng
->fluxion
->mdk4/mdk3
->Pyrit
+*WiFite (or its new rewrite WiFite2)
+*airgeddon
+*aircrack-ng
+*fluxion
+*mdk4/mdk3
+*Pyrit
+
+# General Notes on Installation/Compilation
 
 # Legacy WLAN hacking methods
   It used to be extremely easy to hack a WiFi network. WLANs with WEP could be hacked easily through
