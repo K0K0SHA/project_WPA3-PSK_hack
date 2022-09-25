@@ -1,69 +1,16 @@
 # July 7, 2022
 # project_WPA3-PSK_hack [WORK IN PROGRESS]
 # DISCLAIMER
-All research performed in a safe and legal manner. Please do not discuss the wild use of the tools
-in this repo, or any other tools to take actions against the law. At least, not on GitHub. Radio 
-jamming is illegal, and so is deauthenticating and jamming WiFi. Don't get in trouble!
-...With that said, welcome to the WIFI HACKING LAB!
+All research performed in a safe and legal manner. Please do not discuss the wild use of the tools in this repo, or any other tools to take actions against the law. At least, not on GitHub. Radio jamming is illegal, and so is deauthenticating and jamming WiFi without consent. Don't get in trouble!
 
 # contents
-  This project is a knowledge base of WLAN WPA3-PSK and WPA2 hacking tools and research. The goal of this project is to
-create a way to break into a WPA3-PSK network. In my approach, part of hacking WPA3 is understanding
-how WPA2 works, so this repo will have tools and knowledge for hacking WPA2-PSK as well. This 
-document is meant to give a skiddie-tier overview of WLAN-cracking without diving into the weeds. 
-  This repo should contain links to YouTube videos, other GitHubs, GitLabs, and places to
-find code. I will also download and paste research papers from elite hackers into the repo. I take no
-ownership of such research papers, and promise to do the honorable thing, and always disclaim them. 
-  On the topic of research papers, this repo will contain research documents pertaining to WiFi and
-security, as well as other topics. Programming languages involved will mostly consist of C and Python.
+  This project is a knowledge base of WLAN WPA3-SAE and WPA2 hacking tools and research. The goal of this project is to create a reliable way for a hacker to break into a WPA3-PSK network. In my approach, part of hacking WPA3 is understanding how WPA2 works, so this repo will have tools and knowledge for hacking WPA2-PSK as well. Programming languages involved will mostly consist of C and Python. 
   
-# GNU/Linux Distributions
+# GNU/Linux Distributions 
 
-  Every computer nerd's favorite subject to argue about is Linux distros. In this research lab, you are
-  responsible for building and using your own Linux distribution. As long as your distro has GNU and
-  can install things from GitHub, then you should be fine. Many Linux distros exist. I can't/won't 
-  cover them all in this document because it's pointless. This guide assumes you're somewhat familiar
-  with GNU/Linux terminal and commands.
+  Every FOSS-loving computer nerd's favorite subject to argue about is Linux distros. In this research lab, you are responsible for building and using your own Linux distribution. As long as your distro has GNU, and you can install things from GitHub, then you should be fine. Many Linux distros exist. I can't/won't cover them all in this document because it's pointless. This guide assumes you're somewhat familiar with GNU/Linux terminal and commands. 
   
-  You may choose whatever distro you want. Some popular ones are Ubuntu, Kali, Redhat, Manjaro, Gentoo,
-  Mint, Debian, Devuan, and Arch. Cracking WLAN's should be possible with any of these, so long as you
-  can compile and install the dependencies. This lab should also be possible on a Mac, and on Windows
-  if you're using a VM (see next section). As of this writing, I have not tested any 802.11 cracking
-  techniques by using a Windows device, and I do not own a Macintosh.
-  
-  The research that I've done in this lab is all done on a Debian-based Linux distro. I tend to use 
-  Linux Mint myself. I have my distro on a live USB stick. The stick can boot a live linux distro, and
-  install a linux distro. You really should have one of these. 
-
-# Kali Linux
-
-  Kali Linux, formerly known as Backtrack, is a Linux distro with a bunch of tools for hacking. 
-  It's based on Debian/Ubuntu, so it's actually pretty nice. Beginner friendly, too.
-  Many hackers install and use Kali for its convenience. If you have all the tools you need for the
-  lab working in Kali, then go ahead and use it. But if you're wondering which distro you should use
-  for the WLAN-hacking lab, you may want to think twice about using Kali. There are certain problems 
-  with using Kali Linux, as outlined here.
-
-  Kali ISOs need to be updated in order to get updated Kali tools. Even then, the tools provided with
-  the Kali ISO might be out of date. That's why it's considered good practice to always update your 
-  tools when running a Kali Live USB or VM. 
-  
-  You may run into compatibility errors and dependency problems when trying to run 'pre-installed' 
-  scripts on Kali. Back in my early hacking days before I largely gave up on using Kali, the scripts
-  included could be run with intermittent success. As I developed, I realized Kali lacked what I needed,
-  although I fell in love with the special node-based text editor CherryTree. I will upload notes to
-  this repo in the form of CherryTree (.ctb) documents.
-  
-  Kali has problems running apt-get, as well as other problems that you just wouldn't expect on Ubuntu.
-  For example, if you leave it running long enough for Kali live to enter lockscreen, there is a password
-  but it's hardcoded as 'toor' which is root backwards. I happened to find that detail by reading several
-  books on hacking and Kali. That's why I don't really recommend that you do this project from Kali. 
-  
-  At any rate, I find it much easier to git clone the required tools and install them myself on Ubuntu
-  or Mint, than to just take Kali and run them. I'll research Kali's built in tools and their efficacy.
-  I believe Kali has aircrack-ng suite preinstalled, as well as Fluxion, WiFite, mdk4, mdk3, and most
-  of the other stuff you'll probably need for this lab. Hopefully I'll be able to develop a guide to 
-  crack WLAN's using Kali. I'll make a specific document about using Kali to run the tools required. 
+  You may choose whatever distro you want. Some popular ones are Ubuntu, Kali, Redhat, Manjaro, Gentoo, Mint, Debian, Devuan, and Arch. Cracking WLAN's should be possible with any of these, so long as you can compile and install the dependencies.This lab should also be possible on a Mac, and possibly even on Windows if you're using a VM (see next section). As of September 2022, I have not tested any 802.11 cracking on Mac or Windows. The research that I've done in this lab is all done on a Debian-based Linux distro. I tend to use Linux Mint myself. Following along this lab using Kali should be easy. In fact, we will be modifying stock Kali tools. Or, more truthfully, tools which Kali happens to feature.
 
 # Ubuntu
   I highly recommend a fresh Ubuntu install to begin with. From there, you can set it all up yourself
@@ -112,28 +59,25 @@ The bands of WiFi depend on which country you're in. Here is a frequency list:
 https://en.wikipedia.org/wiki/List_of_WLAN_channels
 
 # Attacking WiFi
-  There is no single way to hack a WLAN. Offensive and defensive security have a way of always evolving. 
+There is no single way to hack a WLAN. Offensive and defensive security have a way of always evolving. 
 There are many techniques. The general trend in 2022 has been significant security improvements in the 
 underlying security mechanisms of WiFi. This repo will have a legacy section which will outline the 
 cryptographic weaknesses of old protocols if you're interested. 
 Obviously, old attacks are ineffective. The only value from them is what they can tell you about new
 protocols. Chances of finding old hardware is actually pretty low. We should focus on new stuff.
   
-# WPA3-PSK and WiFi 6
+# WPA3-SAE and WiFi 6
 https://www.intel.com/content/www/us/en/gaming/resources/wifi-6.html
+**Please note how WPA3-SAE is not WPA3-PSK. WPA3-PSK does not exist, as WiFi 6 no longer uses PSK**  
   
-  With the introduction of WiFi 6 (802.11ax), wireless security has improved once again. A skiddie can
-no longer easily break into a WPA3-secured network. WPA3 offers significant security improvements over
-WPA2, just like WiFi 6 offers speed improvements over its predecessor. Because security research into 
-WPA3-PSK seems to still be in its nascent stage, it is hard to find information as of 2022. This proj.
-will attempt to reverse engineer WPA3-PSK by understanding the attacks against WPA2-PSK, and then 
-looking at how these attacks were mitigated.
+  With the introduction of WiFi 6 (802.11ax), wireless security has improved once again. A skiddie can no longer easily break into a WPA3-secured network. WPA3 offers significant security improvements over WPA2 in the form of forward handshake secrecy. An attacker should no longer be able to snoop a handshake hash for offline cracking. 
 
-  From a security point of view, WPA3-PSK has a new type of handshake called the Dragonfly handshake.
-  It uses SAE (Simultaneous Authentication of Equals) for encryption. 
+  From a security point of view, WPA3-PSK has a new type of handshake called the Dragonfly handshake. Dragonfly uses SAE (Simultaneous Authentication of Equals) for encryption. Apparently WPA3 actually has an option for modP group encryption as well. If you're wondering about Dragonblood by the way, it's old news which has been patched long ago.
+  One proof of concept that has been found on Youtube is a flaw where the attacker can derandomize the handshake through MAC spoofing. This is the primary thing we need to explore. 
+  
 
 # WPA2-PSK
-  Currently the most common type of WLAN in the wild as of 2022. Slowly being phased out by WPA3-PSK. 
+  Currently the most common type of WLAN in the wild as of 2022. Slowly being phased out by WPA3-SAE. 
 Probably will become obsolete in the coming years. Wide variety of attacks exist against WPA2-PSK. 
 WPA2-PSK is still more secure than its predecessors, but by 2022 it is considered very old. 
   This project's documentation details how to hack a WPA2-PSK network in every known possible way. 
@@ -144,6 +88,7 @@ run the scripts cloned or forked within the repo to test them yourself.
 # Scripts for Hacking WPA2-PSK
 The most effective scripts I've found to break into WPA2-PSK networks are:
 
+Reaver (and wash)
 WiFite (or its new rewrite WiFite2)
 airgeddon
 aircrack-ng
